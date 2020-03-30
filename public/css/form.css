@@ -1,0 +1,26 @@
+.form__control {
+  width: 200px;
+  margin: 24px auto 0;
+}
+.form__input {
+  display: block;
+  border: 1px solid #f08080;
+  border-radius: 6px;
+  height: 24px;
+  margin: 3px auto;
+  width: 100%;
+}
+
+.btn {
+  padding: 0 18px;
+  background-color: #f08080;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .3rem;
+}
+
+.btn:hover {
+  border: 1px solid #f08080;
+  background-color: transparent;
+  color: #f08080;
+}

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"files.autoSaveDelay": 1000,
+		"editor.tabSize": 2,
+		"editor.tabCompletion": "on",
+		"editor.fontSize": 10
+	}
+}

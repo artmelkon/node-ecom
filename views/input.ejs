@@ -1,0 +1,17 @@
+<%- include('./inc/header.ejs') %>
+  <link rel="stylesheet" href="/css/form.css" />
+</header>
+<body>
+<%- include('./inc/navbar.ejs') %>
+  <main class="container">
+      <h1 class="slim-title">Build with EJS Templating Engine</h1>
+    <form action="/input/add-product" method="post" class="form">
+      <div class="form__control">
+        <label for="title">Title</label>
+        <input type="text" name="title" class="form__input">
+        <input type="submit" value="Submit" class="form__input btn">
+      </div>
+    </form>
+  </main>
+</body>
+</html>
