@@ -1,25 +1,27 @@
 {
-  "name": "node-server-watcher",
+  "name": "nodejs-complete-guide",
   "version": "1.0.0",
-  "description": "listen for added files",
-  "main": "\"start\"",
+  "description": "Complete Node.js Guide",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "nodemon App.js",
-    "start": "node App.js"
+    "start-dev": "nodemon app.js",
+    "start": "node app.js"
   },
-  "author": "Arthur Melkonyan",
+  "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^1.18.3"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "chokidar": "^3.3.1",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "jsonfile": "^5.0.0",
-    "mongodb": "^3.4.1",
-    "mongoose": "^5.8.3"
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^3.1.6",
+    "mongoose": "^5.2.17",
+    "mysql2": "^1.6.1",
+    "pug": "^2.0.3",
+    "sequelize": "^5.0.0-beta.11"
   }
 }
