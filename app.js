@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const errorController = require('./controllers/error');
-// const User = require('./models/user');
+const User = require('./models/user');
 
 const app = express();
 
@@ -18,21 +18,37 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use((req, res, next) => {
-//   User.findById('5baa2528563f16379fc8a610')
-//     .then(user => {
-//       req.user = new User(user.name, user.email, user.cart, user._id);
-//       next();
-//     })
-//     .catch(err => console.log(err));
-// });
+app.use((req, res, next) => {
+  User.findById('5e8d605e4290c47a41315c66')
+    .then(user => {
+      req.user = user;
+      next();
+    })
+    .catch(err => console.log(err));
+});
 
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-mongoose.connect('mongodb://localhost/shop', {useNewUrlParser: true, useUnifiedTopology: true}
-  )
-  .then(result => { app.listen(3000); })
+const PORT = process.env.PORT || 3000;
+
+mongoose.connect('mongodb://localhost/shop', {useNewUrlParser: true, useUnifiedTopology: true})
+  .then(result => {
+    User.findOne()
+      .then( user => {
+        if( !user ) {
+          const user = new User({
+            name: 'Art',
+            email: 'art@art.com',
+            cart: {
+              items: []
+            }
+          });
+          user.save();
+        }
+      })
+    app.listen(PORT, console.log(`NodeJS Server running on Port: ${PORT}`)); })
   .catch(err => console.error('MongoDB ', err));
+

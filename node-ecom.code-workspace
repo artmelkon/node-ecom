@@ -9,6 +9,15 @@
 		"files.autoSaveDelay": 1000,
 		"editor.fontSize": 10,
 		"editor.tabSize": 2,
-		"editor.detectIndentation": true
+		"editor.detectIndentation": true,
+		"editor.tokenColorCustomizations": {
+			"[Default Dark+]": {
+				"comments": "#537956",
+				"variables": "#78dee7df",
+				"functions": "#e0d973",
+				"semanticHighlighting": true
+			}
+			""
+		}
 	}
 }
