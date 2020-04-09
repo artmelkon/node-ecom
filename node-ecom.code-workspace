@@ -13,7 +13,7 @@
 		"editor.tokenColorCustomizations": {
 			"[Default Dark+]": {
 				"comments": "#537956",
-				"variables": "#78dee7df",
+				"variables": "#a1f7ffdf",
 				"functions": "#e0d973",
 				"semanticHighlighting": true
 			}

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const productSchema = mongoose.Schema({
+const productSchema = new mongoose.Schema({
   title: {
     type: String,
     require: true
@@ -15,6 +15,11 @@ const productSchema = mongoose.Schema({
   },
   imageUrl: {
     type: String,
+    require: true
+  },
+  userId: {
+    type: mongoose.Types.ObjectId,
+    ref: 'User',
     require: true
   }
 })
